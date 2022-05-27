@@ -1,0 +1,10 @@
+.cart_button {
+    width: 10px;
+    height: 7px;
+    border: 2px solid black;
+    color: red;
+}
+
+#total {
+    clear: both;
+}

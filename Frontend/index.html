@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>Car shop</title>
+</head>
+
+<body onload="displayHome()">
+
+
+    <div>
+        <p style="font-size: 30px;">Buy a Car!</p>
+        <div style="border: 2px solid grey; width: 50px; padding: 2px 10px 2px 10px;">
+            <a id="cart_button" href="./cart.html">Cart</a>
+        </div>
+        <br>
+        <input type="text" placeholder="Search.." name="search">
+        <button type="button" onclick="search()">Search</button>
+    </div>
+
+    <div id="board">
+
+    </div>
+
+    <button id="addCarButton" style="visibility: hidden;" onclick="openAddForm()">Add new car</button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h1>Add Car</h1>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Email" name="name" required>
+
+            <label for="desc"><b>Description</b></label>
+            <input type="text" placeholder="Description" name="description" required>
+
+            <label for="price"><b>Price</b></label>
+            <input type="number" placeholder="Price" name="price" required>
+
+            <label for="img"><b>Image</b></label>
+            <input type="text" placeholder="Image" name="image" required>
+
+            <label for="model"><b>Model</b></label>
+            <input type="text" placeholder="Model" name="model" required>
+
+            <label for="category"><b>Category</b></label>
+            <input type="text" placeholder="Category" name="category" required>
+
+            <button type="button" onclick="checkAndClose()">Save</button>
+            <button type="button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div class="form-popup" id="myForm2">
+        <form class="form-container">
+            <h1>Edit Car</h1>
+
+            <label for="name2"><b>Name</b></label>
+            <input type="text" placeholder="Enter Email" name="name2" required>
+
+            <label for="desc2"><b>Description</b></label>
+            <input type="text" placeholder="Description" name="description2" required>
+
+            <label for="price2"><b>Price</b></label>
+            <input type="text" placeholder="Price" name="price2" required>
+
+            <label for="img2"><b>Image</b></label>
+            <input type="text" placeholder="Image" name="image2" required>
+
+            <label for="model2"><b>Model</b></label>
+            <input type="text" placeholder="Model" name="model2" required>
+
+            <label for="category2"><b>Category</b></label>
+            <input type="text" placeholder="Category" name="category2" required>
+
+            <button type="button" onclick="editAndClose()">Edit</button>
+            <button type="button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
